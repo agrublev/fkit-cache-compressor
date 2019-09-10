@@ -2,6 +2,14 @@ module.exports = {
   presets: [
     [
       "@babel/preset-env",
+      {
+        useBuiltIns: "entry",
+        corejs: "3.2.1",
+        loose: true,
+        targets: {
+          node: "current"
+        }
+      }
     ]
   ],
   plugins: [
@@ -11,6 +19,7 @@ module.exports = {
       {
         loose: true
       }
-    ] //,
+    ],
+    "@babel/plugin-transform-runtime"
   ]
 };

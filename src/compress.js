@@ -1,4 +1,4 @@
-export const LZString = (function() {
+const LZString = (function() {
   function o(o, r) {
     if (!t[o]) {
       t[o] = {};
@@ -607,4 +607,6 @@ JSONCB.unpack = function(gzipped, bDecompress) {
 /*
  * Expose Hydra to be used in node.js, as AMD module or as dashboard
  */
-export const JSONC = JSONCB;
+const JSONC = JSONCB;
+
+module.exports = { JSONC, LZString };
